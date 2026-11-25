@@ -1,0 +1,2292 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alberto Watch Company | Luxury Timepieces</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #06152b;
+  --navy2: #0a2342;
+  --navy3: #10365c;
+  --glacier: #8bd3f0;
+  --glacier2: #54b4dc;
+  --glacier3: #b0e7fa;
+  --text: #a9c8dd;
+  --muted: #7195b2;
+  --line: #23496d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--navy);
+  color: var(--glacier);
+  font-family: "Inter", sans-serif;
+}
+
+button, input, textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.topbar {
+  background: var(--navy);
+  color: var(--glacier);
+  border-bottom: 1px solid var(--line);
+  padding: 11px 5%;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(6,21,43,.96);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid var(--line);
+}
+
+.navbar {
+  max-width: 1450px;
+  margin: auto;
+  padding: 20px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.logo {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--glacier);
+  white-space: nowrap;
+}
+
+.logo small {
+  display: block;
+  font-family: "Inter", sans-serif;
+  font-size: 8px;
+  letter-spacing: 5px;
+  text-align: center;
+  margin-top: -5px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: var(--text);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  transition: .3s;
+}
+
+.nav-links a:hover {
+  color: var(--glacier);
+}
+
+.cart-button {
+  border: 1px solid var(--glacier);
+  color: var(--glacier);
+  background: transparent;
+  padding: 12px 18px;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  transition: .3s;
+}
+
+.cart-button:hover {
+  background: var(--glacier);
+  color: var(--navy);
+}
+
+/* =========================
+   CINEMATIC HERO
+========================= */
+
+.hero {
+  min-height: 720px;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 70% 50%, #123d66 0%, #0a2342 35%, #06152b 75%);
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  align-items: center;
+  padding: 65px 7%;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 5;
+}
+
+.eyebrow {
+  color: var(--glacier);
+  font-size: 10px;
+  letter-spacing: 5px;
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(58px, 7vw, 105px);
+  font-weight: 500;
+  line-height: .88;
+  color: var(--glacier);
+  margin-bottom: 30px;
+}
+
+.hero p {
+  max-width: 430px;
+  color: var(--text);
+  font-size: 13px;
+  line-height: 2;
+  margin-bottom: 35px;
+}
+
+.primary-button {
+  display: inline-block;
+  background: var(--glacier);
+  color: var(--navy);
+  border: 1px solid var(--glacier);
+  padding: 16px 27px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.primary-button:hover {
+  background: transparent;
+  color: var(--glacier);
+}
+
+.hero-visual {
+  height: 590px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1300px;
+}
+
+.hero-glow {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(84,180,220,.25), transparent 70%);
+  filter: blur(25px);
+  animation: glowPulse 5s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%,100% { transform: scale(.9); opacity: .6; }
+  50% { transform: scale(1.15); opacity: 1; }
+}
+
+.hero-watch {
+  width: 310px;
+  height: 490px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: heroWatchMove 9s ease-in-out infinite;
+}
+
+@keyframes heroWatchMove {
+  0% {
+    transform: rotateX(8deg) rotateY(-28deg) rotateZ(-5deg);
+  }
+  25% {
+    transform: rotateX(2deg) rotateY(8deg) rotateZ(0deg);
+  }
+  50% {
+    transform: rotateX(-5deg) rotateY(30deg) rotateZ(5deg);
+  }
+  75% {
+    transform: rotateX(5deg) rotateY(5deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(8deg) rotateY(-28deg) rotateZ(-5deg);
+  }
+}
+
+.watch-strap {
+  position: absolute;
+  left: 100px;
+  width: 110px;
+  height: 195px;
+  background: linear-gradient(90deg, #06152b, #12365c, #06152b);
+  border: 2px solid #2d638b;
+  border-radius: 25px;
+  box-shadow: inset 0 0 18px #020b17;
+}
+
+.watch-strap.top {
+  top: -30px;
+}
+
+.watch-strap.bottom {
+  bottom: -30px;
+}
+
+.strap-stitch {
+  position: absolute;
+  inset: 12px 8px;
+  border: 1px dashed #54b4dc;
+  border-radius: 18px;
+  opacity: .55;
+}
+
+.watch-case {
+  position: absolute;
+  top: 115px;
+  left: 35px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #8bd3f0, #24557b, #b0e7fa, #12365c);
+  border: 7px solid #54b4dc;
+  box-shadow:
+    0 25px 55px rgba(0,0,0,.65),
+    inset 0 0 18px #06152b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateZ(35px);
+}
+
+.watch-crystal {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(139,211,240,.2), transparent 30%),
+    radial-gradient(circle, #10365c, #06152b 75%);
+  border: 3px solid #b0e7fa;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 0 25px #020b17;
+}
+
+.watch-crystal::before {
+  content: "ALBERTO";
+  position: absolute;
+  top: 48px;
+  width: 100%;
+  text-align: center;
+  color: var(--glacier);
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+.watch-crystal::after {
+  content: "AUTOMATIC";
+  position: absolute;
+  bottom: 45px;
+  width: 100%;
+  text-align: center;
+  color: var(--glacier2);
+  font-size: 7px;
+  letter-spacing: 2px;
+}
+
+.dial-ring {
+  position: absolute;
+  inset: 12px;
+  border: 1px solid #54b4dc;
+  border-radius: 50%;
+}
+
+.dial-marker {
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  height: 13px;
+  width: 3px;
+  background: var(--glacier);
+  transform-origin: 50% 90px;
+}
+
+.dial-marker:nth-child(2) { transform: rotate(30deg); }
+.dial-marker:nth-child(3) { transform: rotate(60deg); }
+.dial-marker:nth-child(4) { transform: rotate(90deg); }
+.dial-marker:nth-child(5) { transform: rotate(120deg); }
+.dial-marker:nth-child(6) { transform: rotate(150deg); }
+.dial-marker:nth-child(7) { transform: rotate(180deg); }
+.dial-marker:nth-child(8) { transform: rotate(210deg); }
+.dial-marker:nth-child(9) { transform: rotate(240deg); }
+.dial-marker:nth-child(10) { transform: rotate(270deg); }
+.dial-marker:nth-child(11) { transform: rotate(300deg); }
+.dial-marker:nth-child(12) { transform: rotate(330deg); }
+
+.watch-hand {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 3px;
+  height: 62px;
+  background: var(--glacier);
+  transform-origin: bottom;
+  transform: translate(-50%, -100%) rotate(40deg);
+  border-radius: 3px;
+}
+
+.watch-hand.second {
+  height: 75px;
+  width: 1px;
+  background: var(--glacier2);
+  transform: translate(-50%, -100%) rotate(135deg);
+}
+
+.watch-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--glacier);
+  transform: translate(-50%, -50%);
+}
+
+.watch-crown {
+  position: absolute;
+  right: -25px;
+  top: 180px;
+  width: 25px;
+  height: 45px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #10365c, #8bd3f0, #24557b);
+  transform: translateZ(15px);
+}
+
+.hero-caption {
+  position: absolute;
+  bottom: 35px;
+  right: 4%;
+  color: var(--glacier2);
+  font-size: 9px;
+  letter-spacing: 4px;
+}
+
+/* =========================
+   LIVE STRIP
+========================= */
+
+.ticker {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--navy2);
+  color: var(--glacier);
+  padding: 15px 5%;
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  flex-wrap: wrap;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+section {
+  padding: 90px 5%;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-heading h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(42px, 5vw, 65px);
+  font-weight: 500;
+  color: var(--glacier);
+}
+
+.section-heading p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+  margin-top: 12px;
+}
+
+/* =========================
+   PRODUCTS
+========================= */
+
+.filter-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 35px;
+}
+
+.filter-btn {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--text);
+  padding: 12px 20px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  transition: .3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--glacier);
+  color: var(--navy);
+  border-color: var(--glacier);
+}
+
+.products-grid {
+  max-width: 1450px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  gap: 22px;
+}
+
+.product-card {
+  background: var(--navy2);
+  border: 1px solid var(--line);
+  overflow: hidden;
+  transition: .35s;
+}
+
+.product-card:hover {
+  transform: translateY(-7px);
+  border-color: var(--glacier2);
+  box-shadow: 0 20px 45px rgba(0,0,0,.25);
+}
+
+.product-image {
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  background: var(--navy3);
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .5s;
+  filter: saturate(.8);
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.07);
+}
+
+.product-tag {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: var(--navy);
+  color: var(--glacier);
+  border: 1px solid var(--glacier2);
+  padding: 8px 10px;
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+
+.product-info {
+  padding: 22px;
+}
+
+.product-category {
+  color: var(--glacier2);
+  font-size: 9px;
+  letter-spacing: 2px;
+  margin-bottom: 9px;
+}
+
+.product-info h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 27px;
+  font-weight: 600;
+  color: var(--glacier);
+  margin-bottom: 8px;
+}
+
+.product-info p {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.8;
+  min-height: 40px;
+}
+
+.product-price {
+  color: var(--glacier);
+  font-weight: 600;
+  font-size: 14px;
+  margin: 16px 0;
+}
+
+.product-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.product-actions button {
+  flex: 1;
+  padding: 12px 8px;
+  border: 1px solid var(--glacier2);
+  background: transparent;
+  color: var(--glacier);
+  font-size: 9px;
+  letter-spacing: 1px;
+  transition: .3s;
+}
+
+.product-actions button:first-child {
+  background: var(--glacier);
+  color: var(--navy);
+}
+
+.product-actions button:hover {
+  background: var(--glacier2);
+  color: var(--navy);
+}
+
+/* =========================
+   FEATURES
+========================= */
+
+.features {
+  background: var(--navy2);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.features-grid {
+  max-width: 1250px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 25px;
+}
+
+.feature {
+  text-align: center;
+  padding: 25px;
+}
+
+.feature-symbol {
+  font-size: 35px;
+  color: var(--glacier);
+  margin-bottom: 18px;
+}
+
+.feature h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 27px;
+  color: var(--glacier);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.9;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-layout {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-image {
+  height: 470px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(.65);
+}
+
+.about-text h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 58px;
+  line-height: .95;
+  font-weight: 500;
+  color: var(--glacier);
+  margin-bottom: 25px;
+}
+
+.about-text p {
+  color: var(--text);
+  font-size: 12px;
+  line-height: 2;
+  margin-bottom: 18px;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery-grid {
+  max-width: 1350px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 16px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  filter: saturate(.65);
+}
+
+.gallery-grid img:first-child {
+  height: 616px;
+  grid-row: span 2;
+}
+
+/* =========================
+   STORE LOCATOR
+========================= */
+
+.store-section {
+  background: var(--navy2);
+}
+
+.store-box {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  padding: 50px;
+  border: 1px solid var(--line);
+  background: var(--navy);
+}
+
+.store-box h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 38px;
+  color: var(--glacier);
+  margin-bottom: 15px;
+}
+
+.store-box p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 50px;
+}
+
+.contact-info h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 38px;
+  color: var(--glacier);
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 2;
+  margin-bottom: 14px;
+}
+
+.contact-form {
+  display: grid;
+  gap: 14px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.checkout-form input,
+.checkout-form textarea {
+  width: 100%;
+  background: var(--navy2);
+  border: 1px solid var(--line);
+  color: var(--glacier);
+  padding: 15px;
+  font-size: 12px;
+  outline: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder,
+.checkout-form input::placeholder,
+.checkout-form textarea::placeholder {
+  color: var(--muted);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.checkout-form input:focus,
+.checkout-form textarea:focus {
+  border-color: var(--glacier);
+}
+
+.contact-form textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  background: #041022;
+  border-top: 1px solid var(--line);
+  padding: 50px 5%;
+  text-align: center;
+}
+
+footer .logo {
+  margin-bottom: 20px;
+}
+
+footer p {
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 2;
+}
+
+/* =========================
+   CART DRAWER
+========================= */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.65);
+  z-index: 200;
+  display: none;
+}
+
+.overlay.show {
+  display: block;
+}
+
+.cart-drawer {
+  position: fixed;
+  top: 0;
+  right: -450px;
+  width: min(430px,100%);
+  height: 100%;
+  background: var(--navy);
+  border-left: 1px solid var(--line);
+  z-index: 201;
+  display: flex;
+  flex-direction: column;
+  transition: right .35s;
+}
+
+.cart-drawer.open {
+  right: 0;
+}
+
+.drawer-header {
+  padding: 25px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.drawer-header h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px;
+  color: var(--glacier);
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  color: var(--glacier);
+  font-size: 28px;
+}
+
+.cart-items {
+  padding: 20px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 75px 1fr;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.cart-item img {
+  width: 75px;
+  height: 85px;
+  object-fit: cover;
+}
+
+.cart-item h4 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px;
+  color: var(--glacier);
+}
+
+.cart-item p {
+  color: var(--text);
+  font-size: 11px;
+  margin: 5px 0;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  color: var(--glacier);
+}
+
+.quantity-controls button {
+  width: 25px;
+  height: 25px;
+  background: var(--navy2);
+  border: 1px solid var(--line);
+  color: var(--glacier);
+}
+
+.remove-item {
+  width: auto !important;
+  border: none !important;
+  background: transparent !important;
+  color: var(--glacier2) !important;
+  font-size: 10px;
+  padding: 0 5px;
+}
+
+.empty-cart {
+  text-align: center;
+  color: var(--muted);
+  padding: 50px 10px;
+  font-size: 12px;
+}
+
+.cart-footer {
+  border-top: 1px solid var(--line);
+  padding: 25px;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  color: var(--glacier);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.checkout-button {
+  width: 100%;
+  padding: 16px;
+  background: var(--glacier);
+  color: var(--navy);
+  border: 1px solid var(--glacier);
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+/* =========================
+   PRODUCT 3D MODAL
+========================= */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  background: rgba(0,0,0,.78);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal-content {
+  position: relative;
+  width: min(1050px,100%);
+  max-height: 95vh;
+  overflow-y: auto;
+  background: var(--navy);
+  border: 1px solid var(--line);
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 10;
+  width: 38px;
+  height: 38px;
+  background: var(--navy);
+  border: 1px solid var(--glacier2);
+  color: var(--glacier);
+  font-size: 24px;
+}
+
+.product-modal-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.watch-stage {
+  min-height: 520px;
+  background: radial-gradient(circle, #123d66, #0a2342 55%, #06152b 85%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1100px;
+  overflow: hidden;
+}
+
+.modal-watch {
+  width: 230px;
+  height: 350px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(10deg) rotateY(-25deg);
+  transition: transform .8s;
+  animation: modalFloat 5s ease-in-out infinite;
+}
+
+@keyframes modalFloat {
+  0%,100% { translate: 0 0; }
+  50% { translate: 0 -12px; }
+}
+
+.modal-watch.rotated {
+  transform: rotateX(12deg) rotateY(335deg);
+}
+
+.modal-watch-strap {
+  position: absolute;
+  left: 60px;
+  width: 110px;
+  height: 145px;
+  background: linear-gradient(90deg, #06152b, #12365c, #06152b);
+  border: 2px solid var(--glacier2);
+  border-radius: 20px;
+}
+
+.modal-watch-strap.top { top: -35px; }
+.modal-watch-strap.bottom { bottom: -35px; }
+
+.modal-watch-case {
+  position: absolute;
+  top: 65px;
+  left: 20px;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #8bd3f0, #24557b, #b0e7fa, #12365c);
+  border: 7px solid var(--glacier2);
+  box-shadow: 0 15px 30px rgba(0,0,0,.5), inset 0 0 15px var(--navy);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateZ(20px);
+}
+
+.modal-watch-dial {
+  width: 155px;
+  height: 155px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #10365c, #06152b 75%);
+  border: 3px solid var(--glacier);
+  position: relative;
+}
+
+.modal-watch-dial::before {
+  content: "ALBERTO";
+  position: absolute;
+  top: 35px;
+  width: 100%;
+  text-align: center;
+  color: var(--glacier);
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.modal-watch-dial::after {
+  content: "AUTOMATIC";
+  position: absolute;
+  bottom: 32px;
+  width: 100%;
+  text-align: center;
+  color: var(--glacier2);
+  font-size: 7px;
+  letter-spacing: 2px;
+}
+
+.modal-watch-hand {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 3px;
+  height: 48px;
+  background: var(--glacier);
+  transform-origin: bottom;
+  transform: translate(-50%, -100%) rotate(35deg);
+}
+
+.modal-watch-hand.second {
+  height: 60px;
+  width: 1px;
+  background: var(--glacier2);
+  transform: translate(-50%, -100%) rotate(130deg);
+}
+
+.modal-watch-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--glacier);
+  transform: translate(-50%, -50%);
+}
+
+.modal-watch-crown {
+  position: absolute;
+  right: -20px;
+  top: 145px;
+  width: 20px;
+  height: 35px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #12365c, #8bd3f0, #24557b);
+}
+
+.modal-watch-inside {
+  position: absolute;
+  top: 70px;
+  left: 30px;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #24557b, #10365c 65%, #06152b);
+  border: 5px solid var(--glacier);
+  opacity: 0;
+  transform: translateZ(80px) scale(.6);
+  transition: .7s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-watch-inside::before {
+  content: "⚙";
+  font-size: 90px;
+  color: var(--glacier);
+}
+
+.modal-watch-inside::after {
+  content: "MECHANICAL MOVEMENT";
+  position: absolute;
+  bottom: 20px;
+  color: var(--glacier);
+  font-size: 7px;
+  letter-spacing: 1px;
+}
+
+.modal-watch.exploded .modal-watch-case {
+  transform: translateZ(100px) scale(.9);
+}
+
+.modal-watch.exploded .modal-watch-inside {
+  opacity: 1;
+  transform: translateZ(0) scale(1);
+}
+
+.modal-watch.exploded .modal-watch-strap.top {
+  transform: translateY(-55px) translateZ(-30px);
+}
+
+.modal-watch.exploded .modal-watch-strap.bottom {
+  transform: translateY(55px) translateZ(-30px);
+}
+
+.modal-watch.exploded .modal-watch-crown {
+  transform: translateX(30px) translateZ(60px);
+}
+
+.watch-modal-info {
+  padding: 60px 45px;
+}
+
+.watch-modal-info h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 48px;
+  color: var(--glacier);
+  margin-bottom: 15px;
+}
+
+.watch-modal-info p {
+  color: var(--text);
+  font-size: 12px;
+  line-height: 1.9;
+  margin-bottom: 20px;
+}
+
+.watch-modal-price {
+  font-size: 20px;
+  color: var(--glacier);
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.modal-actions button {
+  padding: 14px 17px;
+  border: 1px solid var(--glacier);
+  background: var(--glacier);
+  color: var(--navy);
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.modal-actions button.secondary {
+  background: transparent;
+  color: var(--glacier);
+}
+
+.watch-note {
+  color: var(--muted) !important;
+  font-size: 10px !important;
+  margin-top: 25px;
+}
+
+/* =========================
+   CHECKOUT MODAL
+========================= */
+
+.checkout-modal .modal-content {
+  width: min(650px,100%);
+  padding: 45px;
+}
+
+.checkout-modal h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 42px;
+  color: var(--glacier);
+  margin-bottom: 10px;
+}
+
+.checkout-modal p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.checkout-form {
+  display: grid;
+  gap: 12px;
+}
+
+.checkout-form textarea {
+  min-height: 80px;
+}
+
+.checkout-summary {
+  background: var(--navy2);
+  border: 1px solid var(--line);
+  color: var(--glacier);
+  padding: 15px;
+  font-size: 12px;
+  line-height: 1.9;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   TOAST
+========================= */
+
+.toast {
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: var(--glacier);
+  color: var(--navy);
+  padding: 15px 25px;
+  font-size: 11px;
+  z-index: 500;
+  transition: .3s;
+}
+
+.toast.show {
+  transform: translateX(-50%) translateY(0);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+  .products-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+
+  .nav-links {
+    gap: 13px;
+  }
+
+  .hero {
+    min-height: 650px;
+  }
+}
+
+@media (max-width: 760px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    justify-content: center;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 70px 7%;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-visual {
+    height: 500px;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .about-layout,
+  .contact-grid,
+  .product-modal-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image {
+    height: 330px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery-grid img,
+  .gallery-grid img:first-child {
+    height: 250px;
+    grid-row: auto;
+  }
+
+  .watch-stage {
+    min-height: 420px;
+  }
+
+  .watch-modal-info {
+    padding: 35px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-image {
+    height: 330px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-watch {
+    transform: scale(.85);
+  }
+
+  .ticker {
+    gap: 15px;
+  }
+
+  section {
+    padding: 65px 5%;
+  }
+
+  .topbar {
+    justify-content: center;
+    text-align: center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+  <span>ALBERTO WATCH COMPANY</span>
+  <span>PRECISION · HERITAGE · TIMELESS DESIGN</span>
+</div>
+
+<header>
+  <nav class="navbar">
+    <a href="#home" class="logo">
+      ALBERTO
+      <small>WATCH COMPANY</small>
+    </a>
+
+    <div class="nav-links">
+      <a href="#home">HOME</a>
+      <a href="#collection">COLLECTION</a>
+      <a href="#about">ABOUT</a>
+      <a href="#gallery">GALLERY</a>
+      <a href="#store">STORE</a>
+      <a href="#contact">CONTACT</a>
+    </div>
+
+    <button class="cart-button" onclick="openCart()">
+      CART (<span id="cartCount">0</span>)
+    </button>
+  </nav>
+</header>
+
+<main>
+
+<!-- CINEMATIC OPENING HERO -->
+<section class="hero" id="home">
+
+  <div class="hero-content">
+    <div class="eyebrow">THE ART OF TIMEKEEPING</div>
+
+    <h1>Time is<br>your legacy.</h1>
+
+    <p>
+      Discover exceptional timepieces designed for those who
+      appreciate precision, elegance and timeless sophistication.
+      A statement of confidence in every second.
+    </p>
+
+    <a href="#collection" class="primary-button">
+      EXPLORE COLLECTION
+    </a>
+  </div>
+
+  <div class="hero-visual">
+    <div class="hero-glow"></div>
+
+    <div class="hero-watch">
+      <div class="watch-strap top">
+        <div class="strap-stitch"></div>
+      </div>
+
+      <div class="watch-strap bottom">
+        <div class="strap-stitch"></div>
+      </div>
+
+      <div class="watch-case">
+        <div class="watch-crystal">
+          <div class="dial-ring"></div>
+
+          <div class="dial-marker"></div>
+          <div class="dial-marker"></div>
+          <div class="dial-marker"></div>
+          <div class="dial-marker"></div>
+          <div class="dial-marker"></div>
+          <div class="dial-marker"></div>
+          <div class="dial-marker"></div>
+          <div class="dial-marker"></div>
+          <div class="dial-marker"></div>
+          <div class="dial-marker"></div>
+          <div class="dial-marker"></div>
+          <div class="dial-marker"></div>
+
+          <div class="watch-hand"></div>
+          <div class="watch-hand second"></div>
+          <div class="watch-center"></div>
+        </div>
+      </div>
+
+      <div class="watch-crown"></div>
+    </div>
+
+    <div class="hero-caption">ENGINEERED FOR ETERNITY</div>
+  </div>
+
+</section>
+
+<div class="ticker">
+  <span id="liveDate">DATE</span>
+  <span id="liveTime">TIME</span>
+  <span>ALBERTO WORLDWIDE</span>
+</div>
+
+<!-- COLLECTION -->
+<section id="collection">
+
+  <div class="section-heading">
+    <div class="eyebrow">OUR SIGNATURE COLLECTION</div>
+    <h2>Exceptional Timepieces</h2>
+    <p>Discover a watch that reflects your own sense of style.</p>
+  </div>
+
+  <div class="filter-row">
+    <button class="filter-btn active" onclick="filterProducts('all',this)">ALL WATCHES</button>
+    <button class="filter-btn" onclick="filterProducts('classic',this)">CLASSIC</button>
+    <button class="filter-btn" onclick="filterProducts('sport',this)">SPORT</button>
+    <button class="filter-btn" onclick="filterProducts('automatic',this)">AUTOMATIC</button>
+    <button class="filter-btn" onclick="filterProducts('limited',this)">LIMITED EDITION</button>
+  </div>
+
+  <div class="products-grid" id="productsGrid"></div>
+
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+
+  <div class="section-heading">
+    <div class="eyebrow">THE ALBERTO PROMISE</div>
+    <h2>Made to Be Remembered</h2>
+  </div>
+
+  <div class="features-grid">
+
+    <div class="feature">
+      <div class="feature-symbol">✧</div>
+      <h3>Precision</h3>
+      <p>Designed with attention to detail and dependable timekeeping.</p>
+    </div>
+
+    <div class="feature">
+      <div class="feature-symbol">◇</div>
+      <h3>Craftsmanship</h3>
+      <p>Elegant finishes and carefully considered watch designs.</p>
+    </div>
+
+    <div class="feature">
+      <div class="feature-symbol">⌁</div>
+      <h3>Timeless Style</h3>
+      <p>Classic silhouettes made to complement every occasion.</p>
+    </div>
+
+    <div class="feature">
+      <div class="feature-symbol">⌘</div>
+      <h3>Personal Service</h3>
+      <p>Discover your next timepiece with the Alberto experience.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+
+  <div class="about-layout">
+
+    <div class="about-image">
+      <img
+        src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=1000&q=85"
+        alt="Luxury watch craftsmanship">
+    </div>
+
+    <div class="about-text">
+      <div class="eyebrow">OUR STORY</div>
+
+      <h2>Beyond the<br>passing hours.</h2>
+
+      <p>
+        Alberto Watch Company celebrates the art of refined
+        timekeeping. Our design philosophy brings together
+        contemporary elegance and the enduring appeal of classic watches.
+      </p>
+
+      <p>
+        Each collection is created for individuals who value
+        thoughtful design, confidence and lasting style.
+      </p>
+
+      <a href="#collection" class="primary-button">
+        DISCOVER OUR WATCHES
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+
+  <div class="section-heading">
+    <div class="eyebrow">ALBERTO VISUAL JOURNAL</div>
+    <h2>The Details Matter</h2>
+    <p>A closer look at the world of fine timepieces.</p>
+  </div>
+
+  <div class="gallery-grid">
+    <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=900&q=85" alt="Luxury watch detail">
+    <img src="https://images.unsplash.com/photo-1539874754764-5a96559165b0?auto=format&fit=crop&w=700&q=85" alt="Classic watch">
+    <img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&w=700&q=85" alt="Mechanical watch">
+    <img src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=700&q=85" alt="Premium timepiece">
+    <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?auto=format&fit=crop&w=700&q=85" alt="Watch collection">
+  </div>
+
+</section>
+
+<!-- STORE LOCATOR -->
+<section class="store-section" id="store">
+
+  <div class="section-heading">
+    <div class="eyebrow">FIND ALBERTO</div>
+    <h2>Visit Our Store</h2>
+    <p>Discover the collection and experience the details in person.</p>
+  </div>
+
+  <div class="store-box">
+    <h3>Alberto Watch Company</h3>
+
+    <p>
+      Store locator demonstration for the project.
+      Your browser can display your location if you allow permission.
+    </p>
+
+    <button class="primary-button" onclick="getLocation()">
+      FIND MY LOCATION
+    </button>
+
+    <p id="locationResult" style="margin-top:20px"></p>
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+
+  <div class="section-heading">
+    <div class="eyebrow">GET IN TOUCH</div>
+    <h2>Contact Alberto</h2>
+    <p>Questions about a timepiece? Send us a message.</p>
+  </div>
+
+  <div class="contact-grid">
+
+    <div class="contact-info">
+      <h3>We are here<br>to assist you.</h3>
+
+      <p>Customer care: Monday – Saturday</p>
+      <p>Explore our collections and contact us for product information.</p>
+      <p>Email: support@albertowatches.example</p>
+      <p>This is a project demonstration contact address.</p>
+    </div>
+
+    <form class="contact-form" onsubmit="submitContact(event)">
+      <input type="text" id="contactName" placeholder="Your full name" required>
+      <input type="email" id="contactEmail" placeholder="Your email address" required>
+      <input type="text" id="contactSubject" placeholder="Subject" required>
+      <textarea id="contactMessage" placeholder="Your message" required></textarea>
+      <button class="primary-button" type="submit">SEND MESSAGE</button>
+    </form>
+
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+  <div class="logo">
+    ALBERTO
+    <small>WATCH COMPANY</small>
+  </div>
+
+  <p>Precision. Heritage. Timeless Elegance.</p>
+  <p>© <span id="year"></span> Alberto Watch Company. Project Demonstration.</p>
+</footer>
+
+<!-- CART -->
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
+
+<aside class="cart-drawer" id="cartDrawer">
+
+  <div class="drawer-header">
+    <h2>Your Cart</h2>
+    <button class="close-btn" onclick="closeCart()">×</button>
+  </div>
+
+  <div class="cart-items" id="cartItems"></div>
+
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span>Subtotal</span>
+      <span id="cartTotal">$0</span>
+    </div>
+
+    <button class="checkout-button" onclick="openCheckout()">
+      PROCEED TO CHECKOUT
+    </button>
+  </div>
+
+</aside>
+
+<!-- PRODUCT MODAL -->
+<div class="modal" id="watchModal">
+
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeWatchModal()">×</button>
+
+    <div class="product-modal-layout">
+
+      <div class="watch-stage">
+
+        <div class="modal-watch" id="modalWatch">
+
+          <div class="modal-watch-strap top"></div>
+          <div class="modal-watch-strap bottom"></div>
+
+          <div class="modal-watch-case">
+            <div class="modal-watch-dial">
+              <div class="modal-watch-hand"></div>
+              <div class="modal-watch-hand second"></div>
+              <div class="modal-watch-center"></div>
+            </div>
+          </div>
+
+          <div class="modal-watch-inside"></div>
+          <div class="modal-watch-crown"></div>
+
+        </div>
+
+      </div>
+
+      <div class="watch-modal-info">
+
+        <div class="eyebrow">ALBERTO TIMEPIECE</div>
+
+        <h2 id="modalWatchName">Watch Name</h2>
+
+        <p id="modalWatchDescription"></p>
+
+        <div class="watch-modal-price" id="modalWatchPrice"></div>
+
+        <p>
+          Explore this interactive 3D-style watch view.
+          Rotate the watch, reveal its movement-style detail,
+          then reset the model.
+        </p>
+
+        <div class="modal-actions">
+          <button onclick="rotateWatch()">ROTATE WATCH</button>
+          <button class="secondary" onclick="toggleInside()">EXPLORE INSIDE</button>
+          <button class="secondary" onclick="resetWatch()">RESET WATCH</button>
+          <button onclick="addModalWatchToCart()">ADD TO CART</button>
+        </div>
+
+        <p class="watch-note">
+          This is a CSS 3D demonstration. Individual photorealistic
+          watch models require separate GLB/GLTF model files.
+        </p>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- CHECKOUT -->
+<div class="modal checkout-modal" id="checkoutModal">
+
+  <div class="modal-content">
+
+    <button class="modal-close" onclick="closeCheckout()">×</button>
+
+    <h2>Checkout</h2>
+    <p>Enter your details to create a demonstration order.</p>
+
+    <div class="checkout-summary" id="checkoutSummary"></div>
+
+    <form class="checkout-form" onsubmit="submitOrder(event)">
+      <input type="text" id="orderName" placeholder="Full name" required>
+      <input type="email" id="orderEmail" placeholder="Email address" required>
+      <input type="tel" id="orderPhone" placeholder="Phone number" required>
+      <input type="text" id="orderAddress" placeholder="Delivery address" required>
+      <input type="text" id="orderCity" placeholder="City" required>
+      <textarea id="orderNotes" placeholder="Order notes (optional)"></textarea>
+      <button class="checkout-button" type="submit">PLACE DEMO ORDER</button>
+    </form>
+
+  </div>
+
+</div>
+
+<div class="toast" id="toast">Added to cart</div>
+
+<script>
+/* =========================
+   PRODUCTS
+========================= */
+
+const products = [
+  {
+    id: 1,
+    name: "Aurelius Blue",
+    category: "classic",
+    tag: "BESTSELLER",
+    price: 1250,
+    description: "A refined blue dial with a timeless steel finish.",
+    image: "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=700&q=85"
+  },
+  {
+    id: 2,
+    name: "Glacier Chrono",
+    category: "sport",
+    tag: "SPORT SERIES",
+    price: 1480,
+    description: "A bold sports-inspired design with glacier-blue details.",
+    image: "https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=700&q=85"
+  },
+  {
+    id: 3,
+    name: "Midnight Automatic",
+    category: "automatic",
+    tag: "AUTOMATIC",
+    price: 1890,
+    description: "A sophisticated automatic-style timepiece.",
+    image: "https://images.unsplash.com/photo-1539874754764-5a96559165b0?auto=format&fit=crop&w=700&q=85"
+  },
+  {
+    id: 4,
+    name: "Ocean Heritage",
+    category: "classic",
+    tag: "HERITAGE",
+    price: 1120,
+    description: "Classic proportions with an ocean-inspired dial.",
+    image: "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&w=700&q=85"
+  },
+  {
+    id: 5,
+    name: "Silver Meridian",
+    category: "limited",
+    tag: "LIMITED EDITION",
+    price: 2250,
+    description: "An elegant limited-collection timepiece.",
+    image: "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=700&q=85"
+  },
+  {
+    id: 6,
+    name: "Arctic Explorer",
+    category: "sport",
+    tag: "SPORT SERIES",
+    price: 1590,
+    description: "A contemporary design inspired by exploration.",
+    image: "https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?auto=format&fit=crop&w=700&q=85"
+  },
+  {
+    id: 7,
+    name: "Royal Azure",
+    category: "automatic",
+    tag: "AUTOMATIC",
+    price: 1980,
+    description: "A striking blue timepiece with refined detailing.",
+    image: "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=700&q=85"
+  },
+  {
+    id: 8,
+    name: "Celestial Edition",
+    category: "limited",
+    tag: "LIMITED EDITION",
+    price: 2450,
+    description: "A distinctive statement piece from Alberto.",
+    image: "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=700&q=85"
+  }
+];
+
+/* =========================
+   STATE
+========================= */
+
+let cart = JSON.parse(localStorage.getItem("albertoCart")) || [];
+let selectedWatch = null;
+
+/* =========================
+   PRODUCTS DISPLAY
+========================= */
+
+function renderProducts(filter = "all") {
+  const grid = document.getElementById("productsGrid");
+
+  const filtered = filter === "all"
+    ? products
+    : products.filter(product => product.category === filter);
+
+  grid.innerHTML = filtered.map(product => `
+    <article class="product-card">
+
+      <div class="product-image">
+        <img src="${product.image}" alt="${product.name}" loading="lazy">
+        <span class="product-tag">${product.tag}</span>
+      </div>
+
+      <div class="product-info">
+        <div class="product-category">${product.category.toUpperCase()}</div>
+        <h3>${product.name}</h3>
+        <p>${product.description}</p>
+        <div class="product-price">${formatPrice(product.price)}</div>
+
+        <div class="product-actions">
+          <button onclick="addToCart(${product.id})">ADD TO CART</button>
+          <button onclick="openWatchModal(${product.id})">3D VIEW</button>
+        </div>
+      </div>
+
+    </article>
+  `).join("");
+}
+
+function filterProducts(category, button) {
+  document.querySelectorAll(".filter-btn").forEach(btn => {
+    btn.classList.remove("active");
+  });
+
+  button.classList.add("active");
+  renderProducts(category);
+}
+
+/* =========================
+   PRICE
+========================= */
+
+function formatPrice(price) {
+  return "$" + Number(price).toLocaleString("en-US");
+}
+
+/* =========================
+   CART
+========================= */
+
+function saveCart() {
+  localStorage.setItem("albertoCart", JSON.stringify(cart));
+  updateCart();
+}
+
+function addToCart(productId) {
+  const product = products.find(item => item.id === productId);
+
+  if (!product) return;
+
+  const existing = cart.find(item => item.id === productId);
+
+  if (existing) {
+    existing.quantity++;
+  } else {
+    cart.push({
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      image: product.image,
+      quantity: 1
+    });
+  }
+
+  saveCart();
+  showToast(product.name + " added to cart");
+}
+
+function updateCart() {
+  const cartItems = document.getElementById("cartItems");
+
+  const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+  const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
+  document.getElementById("cartCount").textContent = count;
+  document.getElementById("cartTotal").textContent = formatPrice(total);
+
+  if (cart.length === 0) {
+    cartItems.innerHTML = '<div class="empty-cart">Your cart is currently empty.</div>';
+    return;
+  }
+
+  cartItems.innerHTML = cart.map(item => `
+    <div class="cart-item">
+      <img src="${item.image}" alt="${item.name}">
+
+      <div>
+        <h4>${item.name}</h4>
+        <p>${formatPrice(item.price)}</p>
+
+        <div class="quantity-controls">
+          <button onclick="changeQuantity(${item.id},-1)">−</button>
+          <span>${item.quantity}</span>
+          <button onclick="changeQuantity(${item.id},1)">+</button>
+          <button class="remove-item" onclick="removeFromCart(${item.id})">REMOVE</button>
+        </div>
+      </div>
+    </div>
+  `).join("");
+}
+
+function changeQuantity(id, amount) {
+  const item = cart.find(product => product.id === id);
+
+  if (!item) return;
+
+  item.quantity += amount;
+
+  if (item.quantity <= 0) {
+    cart = cart.filter(product => product.id !== id);
+  }
+
+  saveCart();
+}
+
+function removeFromCart(id) {
+  cart = cart.filter(item => item.id !== id);
+  saveCart();
+  showToast("Item removed");
+}
+
+function openCart() {
+  document.getElementById("cartDrawer").classList.add("open");
+  document.getElementById("overlay").classList.add("show");
+}
+
+function closeCart() {
+  document.getElementById("cartDrawer").classList.remove("open");
+  document.getElementById("overlay").classList.remove("show");
+}
+
+/* =========================
+   PRODUCT MODAL
+========================= */
+
+function openWatchModal(id) {
+  selectedWatch = products.find(product => product.id === id);
+
+  if (!selectedWatch) return;
+
+  document.getElementById("modalWatchName").textContent = selectedWatch.name;
+  document.getElementById("modalWatchDescription").textContent = selectedWatch.description;
+  document.getElementById("modalWatchPrice").textContent = formatPrice(selectedWatch.price);
+
+  resetWatch();
+  document.getElementById("watchModal").classList.add("show");
+}
+
+function closeWatchModal() {
+  document.getElementById("watchModal").classList.remove("show");
+}
+
+function rotateWatch() {
+  document.getElementById("modalWatch").classList.toggle("rotated");
+}
+
+function toggleInside() {
+  document.getElementById("modalWatch").classList.toggle("exploded");
+}
+
+function resetWatch() {
+  const watch = document.getElementById("modalWatch");
+  watch.classList.remove("rotated");
+  watch.classList.remove("exploded");
+}
+
+function addModalWatchToCart() {
+  if (!selectedWatch) return;
+
+  addToCart(selectedWatch.id);
+  closeWatchModal();
+}
+
+/* =========================
+   CHECKOUT
+========================= */
+
+function openCheckout() {
+  if (cart.length === 0) {
+    showToast("Your cart is empty");
+    return;
+  }
+
+  closeCart();
+
+  const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
+  const summary = cart.map(item =>
+    `${item.name} × ${item.quantity} — ${formatPrice(item.price * item.quantity)}`
+  ).join("<br>");
+
+  document.getElementById("checkoutSummary").innerHTML =
+    summary + "<br><strong>Total: " + formatPrice(total) + "</strong>";
+
+  document.getElementById("checkoutModal").classList.add("show");
+}
+
+function closeCheckout() {
+  document.getElementById("checkoutModal").classList.remove("show");
+}
+
+function submitOrder(event) {
+  event.preventDefault();
+
+  if (cart.length === 0) {
+    showToast("Your cart is empty");
+    closeCheckout();
+    return;
+  }
+
+  const order = {
+    orderNumber: "ALB-" + Date.now(),
+    name: document.getElementById("orderName").value,
+    email: document.getElementById("orderEmail").value,
+    phone: document.getElementById("orderPhone").value,
+    address: document.getElementById("orderAddress").value,
+    city: document.getElementById("orderCity").value,
+    notes: document.getElementById("orderNotes").value,
+    items: cart,
+    total: cart.reduce((sum, item) => sum + item.price * item.quantity, 0),
+    date: new Date().toLocaleString()
+  };
+
+  const orders = JSON.parse(localStorage.getItem("albertoOrders")) || [];
+  orders.push(order);
+
+  localStorage.setItem("albertoOrders", JSON.stringify(orders));
+
+  alert(
+    "Thank you, " + order.name + "!\n\n" +
+    "Demo order created.\n" +
+    "Order number: " + order.orderNumber + "\n" +
+    "Total: " + formatPrice(order.total) + "\n\n" +
+    "This project demo does not process real payments."
+  );
+
+  cart = [];
+  saveCart();
+  closeCheckout();
+  event.target.reset();
+}
+
+/* =========================
+   CONTACT FORM
+========================= */
+
+function submitContact(event) {
+  event.preventDefault();
+
+  const message = {
+    name: document.getElementById("contactName").value,
+    email: document.getElementById("contactEmail").value,
+    subject: document.getElementById("contactSubject").value,
+    message: document.getElementById("contactMessage").value,
+    date: new Date().toLocaleString()
+  };
+
+  const messages = JSON.parse(localStorage.getItem("albertoMessages")) || [];
+  messages.push(message);
+
+  localStorage.setItem("albertoMessages", JSON.stringify(messages));
+
+  alert("Your demonstration message has been saved in this browser.");
+  event.target.reset();
+}
+
+/* =========================
+   CLOCK
+========================= */
+
+function updateClock() {
+  const now = new Date();
+
+  document.getElementById("liveDate").textContent =
+    now.toLocaleDateString(undefined, {
+      weekday: "short",
+      year: "numeric",
+      month: "short",
+      day: "numeric"
+    });
+
+  document.getElementById("liveTime").textContent =
+    now.toLocaleTimeString();
+
+  document.getElementById("year").textContent = now.getFullYear();
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+
+/* =========================
+   LOCATION
+========================= */
+
+function getLocation() {
+  const result = document.getElementById("locationResult");
+
+  if (!navigator.geolocation) {
+    result.textContent = "Geolocation is not supported by this browser.";
+    return;
+  }
+
+  result.textContent = "Requesting location permission...";
+
+  navigator.geolocation.getCurrentPosition(
+    position => {
+      const lat = position.coords.latitude.toFixed(4);
+      const lon = position.coords.longitude.toFixed(4);
+
+      result.textContent = "Your coordinates: " + lat + ", " + lon;
+    },
+    () => {
+      result.textContent = "Location permission was denied or unavailable.";
+    }
+  );
+}
+
+/* =========================
+   VISITOR COUNTER
+========================= */
+
+function updateVisitorCounter() {
+  let visits = Number(localStorage.getItem("albertoVisits")) || 0;
+  visits++;
+  localStorage.setItem("albertoVisits", visits);
+}
+
+/* =========================
+   TOAST
+========================= */
+
+let toastTimer;
+
+function showToast(message) {
+  const toast = document.getElementById("toast");
+
+  toast.textContent = message;
+  toast.classList.add("show");
+
+  clearTimeout(toastTimer);
+
+  toastTimer = setTimeout(() => {
+    toast.classList.remove("show");
+  }, 2500);
+}
+
+/* =========================
+   INITIALIZE
+========================= */
+
+renderProducts();
+updateCart();
+updateVisitorCounter();
+
+document.getElementById("watchModal").addEventListener("click", function(event) {
+  if (event.target === this) closeWatchModal();
+});
+
+document.getElementById("checkoutModal").addEventListener("click", function(event) {
+  if (event.target === this) closeCheckout();
+});
+
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Escape") {
+    closeWatchModal();
+    closeCheckout();
+    closeCart();
+  }
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+
+[
+  {
+    "id": "watch1",
+    "name": "Royal Glacier",
+    "category": "Luxury",
+    "price": 1250,
+    "description": "Elegant silver luxury watch with a glacier-blue dial.",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=700"
+  },
+  {
+    "id": "watch2",
+    "name": "Midnight Classic",
+    "category": "Classic",
+    "price": 980,
+    "description": "A timeless classic design for everyday elegance.",
+    "image": "https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=700"
+  },
+  {
+    "id": "watch3",
+    "name": "Vintage Heritage",
+    "category": "Vintage",
+    "price": 1450,
+    "description": "A vintage-inspired timepiece with refined detailing.",
+    "image": "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=700"
+  },
+  {
+    "id": "watch4",
+    "name": "Ocean Blue",
+    "category": "Luxury",
+    "price": 1750,
+    "description": "Premium blue dial with a sophisticated finish.",
+    "image": "https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=700"
+  },
+  {
+    "id": "watch5",
+    "name": "Urban Smart",
+    "category": "Smart",
+    "price": 650,
+    "description": "Modern smartwatch design for connected living.",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=700"
+  },
+  {
+    "id": "watch6",
+    "name": "Silver Elegance",
+    "category": "Classic",
+    "price": 1100,
+    "description": "A polished silver timepiece with a clean dial.",
+    "image": "https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=700"
+  },
+  {
+    "id": "watch7",
+    "name": "Heritage Gold",
+    "category": "Vintage",
+    "price": 1600,
+    "description": "A heritage-inspired watch with a premium look.",
+    "image": "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=700"
+  },
+  {
+    "id": "watch8",
+    "name": "Glacier Signature",
+    "category": "Luxury",
+    "price": 2100,
+    "description": "A signature luxury watch with a refined blue finish.",
+    "image": "https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=700"
+  }
+]

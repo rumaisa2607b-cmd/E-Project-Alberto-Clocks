@@ -1,0 +1,229 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+:root {
+  --navy: #071b35;
+  --blue: #123c61;
+  --glacier: #a9d9ea;
+  --ice: #eaf6fb;
+  --white: #ffffff;
+  --text: #18334c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #f4f9fc;
+  color: var(--text);
+}
+
+.navbar {
+  background: var(--navy);
+  padding: 18px 5%;
+}
+
+.navbar-brand {
+  color: var(--glacier) !important;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.nav-link {
+  color: white !important;
+  margin: 0 8px;
+  transition: .3s;
+}
+
+.nav-link:hover {
+  color: var(--glacier) !important;
+}
+
+.hero {
+  min-height: 570px;
+  display: flex;
+  align-items: center;
+  padding: 70px 8%;
+  color: white;
+  background:
+    linear-gradient(90deg, rgba(4,20,40,.95), rgba(4,20,40,.35)),
+    url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=1800')
+    center/cover;
+}
+
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(45px, 7vw, 82px);
+  max-width: 700px;
+}
+
+.hero p {
+  color: var(--ice);
+  line-height: 1.9;
+  max-width: 540px;
+  margin: 20px 0;
+}
+
+.section {
+  padding: 85px 6%;
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 48px;
+  color: var(--navy);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #71889a;
+  margin-bottom: 45px;
+}
+
+.btn-luxury {
+  background: var(--glacier);
+  color: var(--navy);
+  border: 1px solid var(--glacier);
+  padding: 13px 28px;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.btn-luxury:hover {
+  background: transparent;
+  color: var(--glacier);
+}
+
+.product-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(7,27,53,.08);
+  transition: .4s;
+  height: 100%;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(7,27,53,.16);
+}
+
+.product-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 22px;
+}
+
+.product-info h3 {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--navy);
+  font-size: 27px;
+}
+
+.product-info p {
+  color: #73899b;
+  font-size: 14px;
+}
+
+.price {
+  color: #17618c;
+  font-weight: 600;
+}
+
+.experience {
+  background: linear-gradient(135deg, #071b35, #16466b);
+  color: white;
+  text-align: center;
+}
+
+.experience h2 {
+  color: var(--glacier);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 48px;
+}
+
+#watchCanvas,
+#explodedWatchCanvas {
+  width: 100%;
+  height: 440px;
+  display: block;
+}
+
+.watch-stage {
+  max-width: 850px;
+  margin: 30px auto;
+  background: radial-gradient(circle, #285577, #071b35);
+  border: 1px solid #4d88a8;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.feature-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  height: 100%;
+  box-shadow: 0 5px 25px rgba(7,27,53,.07);
+}
+
+.feature-card h3 {
+  color: var(--navy);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: .4s;
+}
+
+.gallery-img:hover {
+  transform: scale(1.035);
+}
+
+footer {
+  background: var(--navy);
+  color: white;
+  padding: 45px 6%;
+}
+
+footer a {
+  color: var(--glacier);
+  text-decoration: none;
+}
+
+.ticker {
+  background: var(--glacier);
+  color: var(--navy);
+  padding: 12px;
+  text-align: center;
+  font-weight: 600;
+}
+
+#visitorCount {
+  color: var(--glacier);
+  font-size: 13px;
+}
+
+@media(max-width:768px) {
+  .hero { min-height: 470px; }
+  .section { padding: 60px 5%; }
+  .section-title { font-size: 38px; }
+  #watchCanvas, #explodedWatchCanvas { height: 330px; }
+}
